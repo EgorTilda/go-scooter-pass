@@ -1,0 +1,189 @@
+// Reset and Base Styles
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+// Fonts
+@font-face {
+    font-family: 'YS Text';
+    src: url('./../fonts/YS-Text/text-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YS Text';
+    src: url('./../fonts/YS-Text/text-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YS Text';
+    src: url('./../fonts/YS-Text/text-black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Vars
+$accent-color: #FFDE40;
+$primary-grad: radial-gradient(141.42% 141.42% at 100% -0%, #E0B8FF 0%, #B6B9FF 100%);
+$text-color: #21201F;
+$white: #fff;
+
+// Common Styles
+html {
+    font-size: 100%;
+    @media screen and (min-width: 2150px) {
+        font-size: 180%;
+    }
+
+    @media screen and (min-width: 1760px) {
+        font-size: 120%;
+    }
+
+    @media screen and (min-width: 992px) and (max-width: 1199px){
+       font-size: 90%;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        font-size: 80%;
+    }
+    @media (max-width: 767px) {
+        font-size: 58%;
+    }
+   
+}
+
+html, body {
+    font-size: 100%;
+    font-family: 'YS Text', sans-serif;
+    color: $text-color;
+    scroll-behavior: smooth;
+    // overflow-x: hidden;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+}
+
+header, section {
+    margin-bottom: 8rem;
+    width: 100%;
+}
+
+.none {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media screen and (min-width: 2560px) {
+        max-width: 1400px;
+    }
+
+    @media screen and (min-width: 1760px) {
+        max-width: 1280px;
+    }
+    @media screen and (max-width: 1200px) {
+        max-width: 950px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        max-width: 750px;
+    }
+    @media (max-width: 425px) {
+        max-width: 90%;
+    }
+}

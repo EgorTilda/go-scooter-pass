@@ -4,23 +4,14 @@ const sass = require('gulp-sass')(require('sass'));
 const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
 const fs = require('fs');
-const sourceMaps = require('gulp-sourcemaps');
 const mediaCSS = require('gulp-group-css-media-queries');
-const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
 const imagemin = require('imagemin');
 
 const babel = require('gulp-babel');
 const webpack = require('webpack-stream');
 
 // Prefs
-const plumberConfig = {
-    errorHandler: notify.onError({
-        title: 'Styles',
-        message: 'Error <%= error.message %>',
-        sound: false
-    })
-}
+
 
 // Tasks
 gulp.task('html', function(){
@@ -34,17 +25,13 @@ gulp.task('html', function(){
 
 gulp.task('sass', function() {
     return gulp.src('./src/scss/*.scss')
-            .pipe(plumber(plumberConfig))
-            .pipe(sourceMaps.init())
             .pipe(sass())
             .pipe(mediaCSS())
-            .pipe(sourceMaps.write())
             .pipe(gulp.dest('./dist/css/'));
 });
 
 gulp.task('img', function() {
     return gulp.src('./src/img/**/*')
-    .pipe(imagemin({ verbose: true }))
     .pipe(gulp.dest('./dist/img/'));
 });
 

@@ -1,20 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Яндекс Go — Клуб Самокатов</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-    
+
     <header class="header">
-HEADER
+    <div class="container">
+        <nav class="header__nav">
+            <a class="logo"><img src="./img/logo.svg" alt=" Логотип Яндекс Go" class="logo__img"></a>
+        </nav>
+        <div class="header__cta">
+            <h1 class="header__title title">Вступайте <br> в клуб <br> Самокатов</h1>
+            <p class="header__desc desc">
+                Купите абонемент, чтобы стать <br> частью клуба в новом сезоне-2024. <br> 8 месяцев за
+                <span class="cta-cost">
+                    <span class="cta-cost__current">499 ₽</span>
+                    <span class="cta-cost__old">3190 ₽</span> 
+                </span>
+            </p>
+            <button class="header__btn btn">
+                <span class="btn__text">Стать частью клуба</span>
+            </button>
+        </div>
+    </div>
 </header>
+
+    <main class="main">
+        
+        <section class="events">
+    <div class="container">
+        <div class="events__text-content text-content">
+            <h2 class="events__title title">Эксклюзивный доступ к событиям Самокатов</h2>
+            <div class="events__text text">
+                <p>
+                    С абонементом — у вас доступ к специальным мероприятиям, скидки и классный мерч. В 2023 году
+                    мы танцевали на Даче Плюс с Антохой MC, катались на самокатах с Сергеем Мезенцевым и слушали хор
+                    Attaque de Panique
+                </p>
+            </div>
+        </div>
+        <div class="events__gallery gallery">
+            <div class="gallery__item gallery__item--decor-one">
+                <img src="./img/events/photo-music.jpg" alt="Музыкант с трубой" class="gallery__item-img">
+            </div>
+            <div class="gallery__item gallery__item--decor-two">
+                <img src="./img/events/photo-concert.jpg" alt="Концерт хора Attaque de Panique"
+                    class="gallery__item-img">
+            </div>
+            <div class="gallery__item">
+                <img src="./img/events/photo-merch-1.jpg" alt="Мерч: Шоппер Яндекс Go" class="gallery__item-img">
+            </div>
+            <div class="gallery__item gallery__item--decor-tree">
+                <img src="./img/events/photo-merch-2.jpg" alt="Мерч: Панама Яндекс Go" class="gallery__item-img">
+            </div>
+        </div>
+
+        <div class="gallery-slider swiper">
+
+
+            <div class="gallery-slider__wrap swiper-wrapper">
+                <div class="gallery-slider__item swiper-slide">
+                    <img src="./img/events/photo-music.jpg" alt="Музыкант с трубой" class="gallery-slider__item-img">
+                </div>
+                <div class="gallery-slider__item swiper-slide">
+                    <img src="./img/events/photo-concert.jpg" alt="Музыкант с трубой" class="gallery-slider__item-img">
+                </div>
+                <div class="gallery-slider__item swiper-slide">
+                    <img src="./img/events/photo-merch-1.jpg" alt="Музыкант с трубой" class="gallery-slider__item-img">
+                </div>
+                <div class="gallery-slider__item swiper-slide">
+                    <img src="./img/events/photo-merch-2.jpg" alt="Музыкант с трубой" class="gallery-slider__item-img">
+                </div>
+            </div>
+
+            <div class="gallery-slider__controls">
+                <button class="gallery-slider__btn gallery-slider__btn--prev">
+                    <img src="./img/events/arrow-icon.svg" alt="Вперед">
+                </button>
+                <button class="gallery-slider__btn gallery-slider__btn--next">
+                    <img src="./img/events/arrow-icon.svg" alt="Вперед">
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+        <section class="sub">
+    
+</section>
+        <section class="cta">
+   
+</section>
+    </main>
+
     <footer class="footer">
-    FOOTER
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__text">
+                <p>
+                    Доп. опция «Абонемент на самокаты» на 8 месяцев (240 дней) активируется автоматически с момента старта сезона 2024 г. самокатов Яндекс Go, далее предусмотрено автопродление доп.опции за 399 руб./мес. Сертификат на доп.опцию «Абонемент на самокаты» на 8 месяцев оформляется на условиях документа yandex.ru/legal/scooters_seasonpass. Доп.опция доступна пользователям с активной подпиской (условия подписки: yandex.ru/legal/yandex_plus_conditions), есть ограничения, подробнее: yandex.ru/legal/yandex_plus_opzii_list. В случае отсутствия у пользователя активной подписки на дату активации доп.опции, пользователю предоставляется 7 дней подписки Яндекс Плюс бесплатно, далее автопродление — 299 руб./мес. Электросамокаты Яндекс Go — сервис аренды электросамокатов на условиях: clck.ru/gwDGn. 0+
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-    <script src="./js/index.js"></script>
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.bundle.js"></script>
 </body>
+
 </html>
