@@ -724,6 +724,10 @@ section {
     width: 100%;
   }
 
+  .modal__title {
+    font-size: 20px;
+  }
+
   .header .header__btn-wrap {
     width: 100%;
     position: fixed;
