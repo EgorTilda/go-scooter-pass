@@ -249,7 +249,14 @@ section {
 
 .content-card__img {
   width: 5rem;
+  flex-shrink: 0;
+  flex-basis: 24%;
   margin-bottom: 1rem;
+}
+
+.content-card__text {
+  flex-shrink: 1;
+  flex-basis: 76%;
 }
 
 .gallery {
