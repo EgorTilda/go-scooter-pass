@@ -20,6 +20,13 @@
     @media screen and (max-width: 425px) {
         width: 100%;
     }
+
+    &--sm {
+        padding: .8rem 1.8rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        border-radius: 1.8rem;
+    }
 }
 
 .title {
@@ -44,6 +51,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 120%;
+
     @media screen and (max-width: 425px) {
         font-size: 16px;
     }
@@ -62,11 +70,13 @@
     border-radius: 2rem;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.63) 0%, rgba(255, 255, 255, 0.63) 100%),
         radial-gradient(141.42% 141.42% at 100% 0%, #e0b8ff 0%, #b6b9ff 100%);
+
     &__current {
         border-radius: 2rem;
         background: $primary-grad;
         padding: 0.3rem 0.75rem;
     }
+
     &__old {
         font-size: 1rem;
         color: #808080;
@@ -79,6 +89,7 @@
 .content-card {
     display: inline-block;
     padding: 1rem;
+
     &__img {
         width: 5rem;
         margin-bottom: 1rem;
@@ -91,10 +102,10 @@
     grid-template-columns: repeat(2, .5fr);
     grid-template-rows: auto;
     grid-gap: 1rem;
-    transform: rotateZ(2deg); 
+    transform: rotateZ(2deg);
 
     @media screen and (max-width: 768px) {
-        transform: rotateZ(0); 
+        transform: rotateZ(0);
     }
 
     @media screen and (max-width: 425px) {
@@ -115,6 +126,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     @media screen and (max-width: 1130px) {
         display: none;
     }
@@ -126,28 +138,37 @@
         width: 100%;
     }
 }
+
 .gallery__item:nth-child(odd) {
     transform: translateY(20%);
-    @media screen and (max-width: 768px) {
-        transform: none;
-    }
-}
-.gallery__item:nth-child(even) {
-    transform: translateY(-28%);
+
     @media screen and (max-width: 768px) {
         transform: none;
     }
 }
 
-.gallery__item--decor-one, .gallery__item--decor-two,  .gallery__item--decor-tree{
+.gallery__item:nth-child(even) {
+    transform: translateY(-28%);
+
+    @media screen and (max-width: 768px) {
+        transform: none;
+    }
+}
+
+.gallery__item--decor-one,
+.gallery__item--decor-two,
+.gallery__item--decor-tree {
     position: relative;
 }
+
 .gallery__item--decor-one::after {
     @include gallery-decor('./../img/events/decor-map.png', 16rem, -33%, 5%);
 }
+
 .gallery__item--decor-two::after {
     @include gallery-decor('./../img/events/decor-lines.png', 12rem, 72%, -14%);
 }
+
 .gallery__item--decor-tree::after {
     @include gallery-decor('./../img/events/decor-coffee.png', 20rem, 55%, 65%);
 }
@@ -163,17 +184,21 @@
         display: block;
     }
 }
+
 .gallery-slider__wrap {
     margin-bottom: 1.5rem;
 }
+
 .gallery-slider__item {
     padding: 10px 5px;
     display: flex;
     justify-content: center;
+
     img {
         border-radius: 4rem;
     }
 }
+
 .gallery-slider__controls {
     display: flex;
     justify-content: center;
@@ -184,7 +209,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-  
+
     background-color: $accent-color;
     display: inline-block;
 
@@ -201,13 +226,15 @@
 
 // Modal
 .modal__wrap {
-    position:  fixed;
+    position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0);
+    visibility: hidden;
+    transition: all ease-in-out .1s;
     width: 100%;
     height: 100%;
 
@@ -215,16 +242,58 @@
     justify-content: center;
     align-items: center;
 }
+.modal__close-btn {
+    opacity: .5;
+    padding: .5rem;
+    @media screen and (max-width: 768px) {
+        max-width: 30px;
+    }
+}
 
 .modal {
     width: 50vw;
     max-width: 600px;
     margin: 1rem;
-    min-height: 300px;
+    // min-height: 300px;
     background-color: #fff;
-    border-radius: 10%;
+    opacity: 0;
+    border-radius: 2.4rem;
+    padding: 1rem;
+    transition: opacity ease-in-out .1s;
 
     @media screen and (max-width: 425px) {
         width: 100%;
     }
+}
+.show {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal__wrap.show .modal{
+    opacity: 1;
+}
+.modal__content {
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+.modal__control {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+}
+.modal__body {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.modal__title {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.modal__text {
+    font-size: 1.2rem;
 }
