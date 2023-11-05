@@ -698,6 +698,10 @@ section {
 @media screen and (max-width: 425px) {
   .btn {
     width: 100%;
+    font-size: 16px;
+    padding: 2rem 3rem;
+    border-radius: 3rem;
+    box-shadow: 0px 4px 200px 0px rgba(255, 222, 64, 0.59);
   }
 
   .btn--sm {
