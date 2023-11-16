@@ -11,7 +11,7 @@ const htmlmin = require('gulp-htmlclean');
 const babel = require('gulp-babel');
 const webpack = require('webpack-stream');
 const sassGlob = require('gulp-sass-glob');
-const webp = require('gulp-webp');
+//const webp = require('gulp-webp');
 const webphtml = require('gulp-webp-html');
 const webpcss = require('gulp-webp-css');
 
@@ -22,7 +22,7 @@ gulp.task('html:docs', function(){
                 prefix: '@@',
                 basepath: '@file'
             }))
-            .pipe(webphtml())
+            //.pipe(webphtml())
             .pipe(htmlmin())
             .pipe(gulp.dest('./docs/'));
 });
@@ -32,7 +32,7 @@ gulp.task('sass:docs', function() {
             .pipe(sassGlob())
             // .pipe(mediaCSS())
             .pipe(sass())
-            .pipe(webpcss())
+            //.pipe(webpcss())
             .pipe(cssmin())
             .pipe(gulp.dest('./docs/css/'));
 });
@@ -40,9 +40,8 @@ gulp.task('sass:docs', function() {
 gulp.task('img:docs', function() {
     return gulp.src('./src/img/**/*')
     //.pipe(webp())
-    .pipe(gulp.dest('./docs/img/'))
-
-    .src('./src/img/**/*')
+   // .pipe(gulp.dest('./docs/img/'))
+   // .src('./src/img/**/*')
     .pipe(imagemin({ verbose: true }))
     .pipe(gulp.dest('./docs/img/'));
 });
